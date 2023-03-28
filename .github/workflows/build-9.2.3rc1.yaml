@@ -30,7 +30,7 @@ jobs:
           push: true
           pull: true
           no-cache: true
-          file: piraeus/dockerfiles/drbd-driver-loader/Dockerfile.jammy
+          file: dockerfiles/drbd-driver-loader/Dockerfile.jammy
           build-args: |
             PLAID_BUILD_TAG=${{ steps.docker_tag.outputs.tag }}
           tags: gcr.io/plaidcloud-build/drdb:latest,gcr.io/plaidcloud-build/drdb:${{ github.ref_name }}-${{ github.run_number }}
